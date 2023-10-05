@@ -40,6 +40,13 @@ Beacon信标本质是一种蓝牙广播标准，该标准不是蓝牙技术联�
 ### Eddystone数据结构
 数据包格式如下：
 ![be403ff614ec47dab24a1e4441497156](https://github.com/StephenGu010/beacon/assets/105930694/f5bf68f9-8421-493f-8194-48b3ea4bdfe4)
+
+### Eddystone
+
+- Eddystone - UID 　　　　　广播自定义唯一的信标ID
+- Eddystone - URL 　　　　　广播网址
+- Eddystone - TLM/ETLM 　　广播自身数据
+- Eddystone - EID 　　　　　加密的临时标识符
 #### UID
 这是由三个字段组成的主要Eddystone框架，即命名空间标识符（10byte），实例标识符（6byte）和功率校准（1byte）。他将有助于将字段直接配置到BLE信标中，实例标识符旨在唯一地表示一个信标，因为他们具有不同的实例ID，功率校准字段用于根据RSSI帮助计算移动设备和Eddystone信标之间的距离。
 #### URL
@@ -49,28 +56,4 @@ Eddystone-TML 框架的主要是提供关于Eddystone的健康状况的完整报
 #### EID
 这是负责小工具安全和隐私的框架。
 
-
-###原理说明（可选）
-阐述项目是基于什么思路设计的
-
-
-### 下载安装
-Gradle:  
-``` xml
-compile 'xxx'
-```
-(说明项目的配置方法，android开源库多用Gradle导入)
-
-### 使用方法
-怎么使用，有哪些步骤哪些接口。
-
-### 注意事项
-比如混淆方法等
-
-### TODO（可选）
-接下来的开发/维护计划。
-
-## License
-遵守的协议
-————————————————
 原文链接：https://blog.csdn.net/yplwrt/article/details/129107710
